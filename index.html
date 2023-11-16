@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Travel widget</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+
+<body class="some-other-element">
+	<div class="full-search">
+		<div class="full-search__container">
+			<div class="full-search__body">
+				<div class="full-search__tabs">
+					<div data-tabs class="tabs-main">
+						<div class="tabs-main__nav _icon-spoiler">
+							<nav data-tabs-titles class="tabs-main__navigation">
+								<button type="button" class="tabs-main__title _tab-active _icon-flight">Tours</button>
+								<button type="button" class="tabs-main__title _icon-emoji_transportation">Excursions</button>
+								<button type="button" class="tabs-main__title _icon-hotel">Hotels</button>
+								<button type="button" class="tabs-main__title _icon-car">Transfer</button>
+								<button type="button" class="tabs-main__title _icon-topic">Visa</button>
+							</nav>
+						</div>
+						<div class="tabs-main__items">
+							<!-- === -->
+							<div class="tabs-main__header _search-settings">
+								<div class="tabs-main__flight flight-tour">
+									<label class="flight-tour__true">
+										<input data-search-input class="inp-hidden" type="radio" name="Flight" checked value="true">
+										<span>With a flight</span>
+									</label>
+									<label class="flight-tour__false">
+										<input data-search-input class="inp-hidden value-false" type="radio" name="Flight" value="false">
+										<span>Without flight</span>
+									</label>
+								</div>
+								<div data-da=".tabs-main__box, 767, last" class="tabs-main__filters">
+									<div class="tabs-main__save-search search-params">
+										<label class="search-params__label">
+											<input data-search-input class="inp-hidden _icon-checked-forms" type="checkbox" name="Save_search">
+											<span data-serch-line class="search-params__content">
+												<span class="search-params__wrapper">Save the search</span>
+												<span class="checkbox _icon-checked-forms"></span>
+											</span>
+										</label>
+									</div>
+									<div class="tabs-main__save-search search-params search-params_guide">
+										<label class="search-params__label">
+											<input data-search-input class="inp-hidden" type="checkbox" name="need-a-guide">
+											<span data-serch-line class="search-params__content">
+												<span class="search-params__wrapper">Need a guide</span>
+												<span class="checkbox _icon-checked-forms"></span>
+											</span>
+										</label>
+									</div>
+								</div>
+							</div>
+							<!-- === -->
+							<div class="tabs-main__box">
+								<div data-tabs-body class="tabs-main__content">
+
+									<!-- ? form-tour ======================================================================================================================================================== -->
+
+									<div data-search-tab class="tabs-main__body">
+										<div class="form-tour">
+											<!-- === -->
+											<div class="form-tour__columns columns-tour">
+												<div class="columns-tour__column column-location">
+													<div data-spoiler-close data-select="text" class="column-location__input _input-item column-location__input--from _icon-apartment">
+														<input class="column-location__input-button _input-wrapper" type="text" readonly data-selected placeholder="City of departure" autocomplete="off">
+														<div class="form-tour__items items-dropdown">
+															<div class="items-dropdown__item">
+																<div class="items-dropdown__wrapper">
+																	<div class="items-dropdown__search-header">
+																		<input autocomplete="off" type="search" name="city-of-departure" placeholder="Enter the value for sorting" class="items-dropdown__search-input">
+																	</div>
+																	<ul data-simplebar class="items-dropdown__list">
+																		<li class="items-dropdown__item">
+																			<label class="items-dropdown__label">
+																				<input data-search-input class="inp-hidden" type="radio" name="Where" value="Dubai">
+																				<span data-serch-line class="items-dropdown__content">
+																					<span class="items-dropdown__title">Dubai</span>
+																				</span>
+																			</label>
+																		</li>
+																		<li class="items-dropdown__item">
+																			<label class="items-dropdown__label">
+																				<input data-search-input class="inp-hidden" type="radio" name="Where" value="Istanbul">
+																				<span data-serch-line class="items-dropdown__content">
+																					<span class="items-dropdown__title">Istanbul</span>
+																				</span>
+																			</label>
+																		</li>
+																		<li class="items-dropdown__item">
+																			<label class="items-dropdown__label">
+																				<input data-search-input class="inp-hidden" type="radio" name="Where" value="Tashkent">
+																				<span data-serch-line class="items-dropdown__content">
+																					<span class="items-dropdown__title">Tashkent</span>
+																				</span>
+																			</label>
+																		</li>
+																		<li class="items-dropdown__item">
+																			<label class="items-dropdown__label">
+																				<input data-search-input class="inp-hidden" type="radio" name="Where" value="Kazakhstan">
+																				<span data-serch-line class="items-dropdown__content">
+																					<span class="items-dropdown__title">Kazakhstan</span>
+																				</span>
+																			</label>
+																		</li>
+																		<li class="items-dropdown__item">
+																			<label class="items-dropdown__label">
+																				<input data-search-input class="inp-hidden" type="radio" name="Where" value="Turkmenistan">
+																				<span data-serch-line class="items-dropdown__content">
+																					<span class="items-dropdown__title">Turkmenistan</span>
+																				</span>
+																			</label>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</div>
+														<div style="display: none;" class="error">
+															The field is required
+														</div>
+													</div>
+													<div data-spoiler-close data-select="send-line" class="column-location__input _input-item column-location__input--where _icon-location">
+														<input readonly class="_input-wrapper" data-selected data-search-input name="From_Where_2" placeholder="Where" autocomplete="off" type="text">
+														<div class="form-tour__items items-dropdown items-dropdown_where">
+
+															<div class="items-dropdown__wrappers">
+																<div class="items-dropdown__search-header">
+																	<input autocomplete="off" type="search" name="search city of arrival" placeholder="Enter the value for sorting" class="items-dropdown__search-input">
+																</div>
+																<ul data-simplebar class="items-dropdown__list">
+																	<li class="items-dropdown__item">
+																		<label class="items-dropdown__label">
+																			<input data-search-input class="inp-hidden" type="radio" name="city-of-arrival" value="Dubai">
+																			<span data-serch-line class="items-dropdown__content">
+																				<span class="items-dropdown__title">Dubai</span>
+																			</span>
+																		</label>
+																	</li>
+																	<li class="items-dropdown__item">
+																		<label class="items-dropdown__label">
+																			<input data-search-input class="inp-hidden" type="radio" name="city-of-arrival" value="Istanbul">
+																			<span data-serch-line class="items-dropdown__content">
+																				<span class="items-dropdown__title">Istanbul</span>
+																			</span>
+																		</label>
+																	</li>
+																	<li class="items-dropdown__item">
+																		<label class="items-dropdown__label">
+																			<input data-search-input class="inp-hidden" type="radio" name="city-of-arrival" value="Ташкент">
+																			<span data-serch-line class="items-dropdown__content">
+																				<span class="items-dropdown__title">Tashkent</span>
+																			</span>
+																		</label>
+																	</li>
+																	<li class="items-dropdown__item">
+																		<label class="items-dropdown__label">
+																			<input data-search-input class="inp-hidden" type="radio" name="city-of-arrival" value="Kazakhstan">
+																			<span data-serch-line class="items-dropdown__content">
+																				<span class="items-dropdown__title">Kazakhstan</span>
+																			</span>
+																		</label>
+																	</li>
+																	<li class="items-dropdown__item">
+																		<label class="items-dropdown__label">
+																			<input data-search-input class="inp-hidden" type="radio" name="city-of-arrival" value="Turkmenistan">
+																			<span data-serch-line class="items-dropdown__content">
+																				<span class="items-dropdown__title">Turkmenistan</span>
+																			</span>
+																		</label>
+																	</li>
+																</ul>
+															</div>
+
+														</div>
+														<div style="display: none;" class="error">
+															The field is required
+														</div>
+													</div>
+												</div>
+												<!-- = -->
+												<div class="columns-tour__center">
+													<div class="column-days">
+														<div data-spoiler-close data-select="all" class="column-days__wrappers _input-item _bg-checked">
+															<button data-selected class="column-days__selected _input-wrapper">
+																<span>14</span>
+																<strong class="column-days__selected-days">Days</strong>
+															</button>
+															<div class="column-days__items items-dropdown items-dropdown_days">
+																<div class="items-dropdown__item">
+																	<div class="items-dropdown__wrapper">
+																		<ul data-simplebar class="items-dropdown__list items-dropdown__list_days">
+																			<li class="items-dropdown__item">
+																				<label class="items-dropdown__label">
+																					<input data-search-input class="inp-hidden" type="radio" name="day" value="12">
+																					<span data-serch-line class="items-dropdown__content">
+																						<span class="items-dropdown__title">12 days</span>
+																					</span>
+																				</label>
+																			</li>
+																			<li class="items-dropdown__item">
+																				<label class="items-dropdown__label">
+																					<input data-search-input class="inp-hidden" checked type="radio" name="day" value="14">
+																					<span data-serch-line class="items-dropdown__content">
+																						<span class="items-dropdown__title">14 days</span>
+																					</span>
+																				</label>
+																			</li>
+																			<li class="items-dropdown__item">
+																				<label class="items-dropdown__label">
+																					<input data-search-input class="inp-hidden" type="radio" name="day" value="55">
+																					<span data-serch-line class="items-dropdown__content">
+																						<span class="items-dropdown__title">55 days</span>
+																					</span>
+																				</label>
+																			</li>
+																		</ul>
+
+																	</div>
+
+																</div>
+
+															</div>
+														</div>
+														<div style="display: none;" class="error error_days">
+															No days
+														</div>
+													</div>
+
+													<div class="column-date">
+														<div class="column-date__wrapper">
+															<div class="column-date__selected _input-item">
+																<button type="button" class="column-date__return _input-wrapper _icon-event_upcoming">
+																	<span class="column-date__cont">
+																		<span>Date</span>
+																		<span class="column-date__day">14</span>
+																		<span class="column-date__bottom">
+																			<span class="column-date__mount">05</span>.<span class="column-date__year">2023</span>
+																		</span>
+																	</span>
+																</button>
+
+															</div>
+														</div>
+														<div style="display: none;" class="error error_dats">
+															No dates
+														</div>
+													</div>
+												</div>
+												<!-- = -->
+												<div class="columns-tour__column">
+													<div class="row-placement ">
+														<div data-select data-spoiler-close class="row-placement__wrapper _input-item _bg-checked">
+															<button type="button" data-selected class="row-placement__selected _input-wrapper  secect-arrow"> <span> </span>Accommodation</button>
+															<ul data-simplebar class="row-placement__items items-dropdown items-dropdown_placement">
+																<li class="items-dropdown__item">
+																	<label class="items-dropdown__label">
+																		<input data-search-input checked class="inp-hidden" type="radio" name="tour type" value="1 type">
+																		<span data-serch-line class="items-dropdown__content">
+																			<span class="items-dropdown__wrapper">1 type</span>
+																		</span>
+																	</label>
+																</li>
+																<li class="items-dropdown__item">
+																	<label class="items-dropdown__label">
+																		<input data-search-input class="inp-hidden" type="radio" name="tour type" value="2 type">
+																		<span data-serch-line class="items-dropdown__content">
+																			<span class="items-dropdown__wrapper">2 type</span>
+																		</span>
+																	</label>
+																</li>
+																<li class="items-dropdown__item">
+																	<label class="items-dropdown__label">
+																		<input data-search-input class="inp-hidden" type="radio" name="tour type" value="3 type">
+																		<span data-serch-line class="items-dropdown__content">
+																			<span class="items-dropdown__wrapper">3 type</span>
+																		</span>
+																	</label>
+																</li>
+															</ul>
+															<div style="display: none;" class="error">
+																The field is required
+															</div>
+														</div>
+
+													</div>
+													<div class="row-tourists">
+														<div data-quantity-wrapper data-select="all" class="row-tourists__wrapper close-block _input-item">
+															<button data-selected type="button" class="row-tourists__selected _input-wrapper secect-arrow">
+																Adults:<span data-quantity-render="adults"></span>Children:<span data-quantity-render="childrens"></span>Up to a year:<span data-quantity-render="babies"></span>
+															</button>
+															<ul class="row-tourists__items items-dropdown items-dropdown_tourists items-dropdown_tourists-640">
+																<li class="row-tourists__item">
+																	<div>Adults</div>
+																	<div class="row-tourists__quantity quantity">
+																		<button data-quantity-minus type="button" class="quantity__button quantity__button_minus"></button>
+																		<div class="quantity__input">
+																			<input data-quantity-value="adults" autocomplete="off" type="text" name="tour adults" value="0">
+																		</div>
+																		<button data-quantity-plus type="button" class="quantity__button quantity__button_plus"></button>
+																	</div>
+																</li>
+																<li class="row-tourists__item">
+																	<div>Children</div>
+																	<div class="row-tourists__quantity quantity">
+																		<button data-quantity-minus type="button" class="quantity__button quantity__button_minus"></button>
+																		<div class="quantity__input">
+																			<input data-quantity-value="childrens" autocomplete="off" type="text" name="tour childrens" value="0">
+																		</div>
+																		<button data-quantity-plus type="button" class="quantity__button quantity__button_plus"></button>
+																	</div>
+																</li>
+																<li class="row-tourists__item">
+																	<div>Babies</div>
+																	<div class="row-tourists__quantity quantity">
+																		<button data-quantity-minus type="button" class="quantity__button quantity__button_minus"></button>
+																		<div class="quantity__input">
+																			<input data-quantity-value="babies" autocomplete="off" type="text" name="tour babies" value="0">
+																		</div>
+																		<button data-quantity-plus type="button" class="quantity__button quantity__button_plus"></button>
+																	</div>
+																</li>
+																<li class="row-tourists__item ">
+																	<button type="button" class="row-tourists__button button-completed _fw">Done</button>
+																</li>
+															</ul>
+															<div style="display: none;" class="error">
+																The field is required
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- = -->
+												<div class="columns-tour__button">
+													<button class="search-btn search-btn_big _icon-search" type="submit">Search</button>
+												</div>
+											</div>
+											<!-- === -->
+										</div>
+									</div>
+									<!-- ? form-excursions ======================================================================================================================================================== -->
+
+									<div data-search-tab class="tabs-main__body">
+
+										<div class="form-excursions">
+											<div class="form-excursions__body">
+												<div class="form-excursions__search-line">
+													<div data-spoiler-close data-select="text" class="form-excursions__input _icon-location _input-item">
+														<input readonly class="_input-wrapper" data-selected data-search-input name="Excursion" placeholder="The direction where the tour will be" autocomplete="off" type="text">
+														<div class="form-excursions__items items-dropdown  items-dropdown_excursions">
+
+															<div class="items-dropdown__wrapper">
+																<div class="items-dropdown__search-header">
+																	<input autocomplete="off" type="search" name="city excursions search" placeholder="Enter the value for sorting" class="items-dropdown__search-input">
+																</div>
+																<ul data-simplebar class="items-dropdown__list">
+
+																	<li class="items-dropdown__item">
+																		<label class="items-dropdown__label">
+																			<input data-search-input class="inp-hidden" type="radio" name="city-excursions" value="Dubai">
+																			<span data-serch-line class="items-dropdown__content">
+																				<span class="items-dropdown__title">Dubai</span>
+																			</span>
+																		</label>
+																	</li>
+																	<li class="items-dropdown__item">
+																		<label class="items-dropdown__label">
+																			<input data-search-input class="inp-hidden" type="radio" name="city-excursions" value="Istanbul">
+																			<span data-serch-line class="items-dropdown__content">
+																				<span class="items-dropdown__title">Istanbul</span>
+																			</span>
+																		</label>
+																	</li>
+																	<li class="items-dropdown__item">
+																		<label class="items-dropdown__label">
+																			<input data-search-input class="inp-hidden" type="radio" name="city-excursions" value="Tashkent">
+																			<span data-serch-line class="items-dropdown__content">
+																				<span class="items-dropdown__title">Tashkent</span>
+																			</span>
+																		</label>
+																	</li>
+																	<li class="items-dropdown__item">
+																		<label class="items-dropdown__label">
+																			<input data-search-input class="inp-hidden" type="radio" name="city-excursions" value="Kazakhstan">
+																			<span data-serch-line class="items-dropdown__content">
+																				<span class="items-dropdown__title">Kazakhstan</span>
+																			</span>
+																		</label>
+																	</li>
+																	<li class="items-dropdown__item">
+																		<label class="items-dropdown__label">
+																			<input data-search-input class="inp-hidden" type="radio" name="city-excursions" value="Turkmenistan">
+																			<span data-serch-line class="items-dropdown__content">
+																				<span class="items-dropdown__title">Turkmenistan</span>
+																			</span>
+																		</label>
+																	</li>
+																</ul>
+															</div>
+
+														</div>
+														<div style="display: none;" class="error">
+															The field is required
+														</div>
+													</div>
+													<button type="submit" class="form-excursions__button search-btn _icon-search">Search</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- ? form-hotels ======================================================================================================================================================== -->
+									<div data-search-tab class="tabs-main__body">
+										<div class="form-hotels">
+											<div class="form-hotels__body">
+												<div class="form-hotels__search-line">
+													<div data-spoiler-close data-select class="form-hotels__input _icon-location _input-item">
+														<input readonly class="_input-wrapper" data-selected data-search-input type="text" name="city hotels" placeholder="Enter a city or country" autocomplete="off">
+														<div class="form-hotels__items items-dropdown items-dropdown_cities-hotels">
+															<div class="items-dropdown__item">
+																<div class="items-dropdown__wrapper items-dropdown__wrapper items-dropdown__wrappers_hotel-city-wrapper">
+																	<div class="items-dropdown__search-header">
+																		<input autocomplete="off" type="search" name="search city hotels" placeholder="Enter the value for sorting" class="items-dropdown__search-input">
+																	</div>
+																	<ul data-simplebar class="items-dropdown__list">
+																		<li class="items-dropdown__item">
+																			<label class="items-dropdown__label">
+																				<input data-search-input class="inp-hidden" type="radio" name="hotel of city" value="Dubai">
+																				<span data-serch-line class="items-dropdown__content">
+																					<span class="items-dropdown__title">Dubai</span>
+																				</span>
+																			</label>
+																		</li>
+																		<li class="items-dropdown__item">
+																			<label class="items-dropdown__label">
+																				<input data-search-input class="inp-hidden" type="radio" name="hotel of city" value="Istanbul">
+																				<span data-serch-line class="items-dropdown__content">
+																					<span class="items-dropdown__title">Istanbul</span>
+																				</span>
+																			</label>
+																		</li>
+																		<li class="items-dropdown__item">
+																			<label class="items-dropdown__label">
+																				<input data-search-input class="inp-hidden" type="radio" name="hotel of city" value="Tashkent">
+																				<span data-serch-line class="items-dropdown__content">
+																					<span class="items-dropdown__title">Tashkent</span>
+																				</span>
+																			</label>
+																		</li>
+																		<li class="items-dropdown__item">
+																			<label class="items-dropdown__label">
+																				<input data-search-input class="inp-hidden" type="radio" name="hotel of city" value="Kazakhstan">
+																				<span data-serch-line class="items-dropdown__content">
+																					<span class="items-dropdown__title">Kazakhstan</span>
+																				</span>
+																			</label>
+																		</li>
+																		<li class="items-dropdown__item">
+																			<label class="items-dropdown__label">
+																				<input data-search-input class="inp-hidden" type="radio" name="hotel of city" value="Turkmenistan">
+																				<span data-serch-line class="items-dropdown__content">
+																					<span class="items-dropdown__title">Turkmenistan</span>
+																				</span>
+																			</label>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</div>
+														<div style="display: none;" class="error">
+															The field is mandatory
+														</div>
+													</div>
+
+													<div class="form-hotels__column">
+														<div id="calendarContainer" class="form-hotels__input _input-item">
+															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<mask id="mask0_0_2742" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+																	<rect width="24" height="24" fill="#D9D9D9" />
+																</mask>
+																<g mask="url(#mask0_0_2742)">
+																	<path
+																		d="M6.0299 22C5.47825 22 5.00602 21.8042 4.61318 21.4125C4.22034 21.0208 4.02393 20.55 4.02393 20V6C4.02393 5.45 4.22034 4.97917 4.61318 4.5875C5.00602 4.19583 5.47825 4 6.0299 4H7.03288V2H9.03885V4H17.0627V2H19.0687V4H20.0717C20.6233 4 21.0956 4.19583 21.4884 4.5875C21.8812 4.97917 22.0777 5.45 22.0777 6V12H20.0717V10H6.0299V20H13.0508V22H6.0299ZM23.206 17L21.0747 14.875L21.8018 14.15C21.9857 13.9667 22.2197 13.875 22.5039 13.875C22.7881 13.875 23.0221 13.9667 23.206 14.15L23.9332 14.875C24.1171 15.0583 24.209 15.2917 24.209 15.575C24.209 15.8583 24.1171 16.0917 23.9332 16.275L23.206 17ZM15.0568 23V20.875L20.3726 15.575L22.5039 17.7L17.1881 23H15.0568ZM6.0299 8H20.0717V6H6.0299V8Z"
+																		fill="#6B6B6B" />
+																</g>
+															</svg>
+
+															<input readonly class="form-hotels__date _input-item" name="daterange" type="text" value="" autocomplete="off">
+															<div style="display: none;" class="error">
+																The field is mandatory
+															</div>
+														</div>
+
+													</div>
+													<div class="row-tourists">
+														<div data-quantity-wrapper data-select class="row-tourists__wrapper close-block _input-item">
+															<button data-selected type="button" class="row-tourists__selected _input-wrapper _icon-person  secect-arrow">
+																<span><span data-quantity-render="adults-hotels"></span> adults, <span data-quantity-render="childrens-hotels"></span> children, <span data-quantity-render="rooms">
+																	</span> room</span>
+
+															</button>
+															<ul class="row-tourists__items items-dropdown items-dropdown_tourists-hotels">
+																<li class="row-tourists__item">
+																	<div>Adults</div>
+																	<div class="row-tourists__quantity quantity">
+																		<button data-quantity-minus type="button" class="quantity__button quantity__button_minus"></button>
+																		<div class="quantity__input">
+																			<input data-quantity-value="adults-hotels" autocomplete="off" type="text" name="adults-hotels" value="2">
+																		</div>
+																		<button data-quantity-plus type="button" class="quantity__button quantity__button_plus"></button>
+																	</div>
+																</li>
+																<li class="row-tourists__item">
+																	<div>Children</div>
+																	<div class="row-tourists__quantity quantity">
+																		<button data-quantity-minus type="button" class="quantity__button quantity__button_minus"></button>
+																		<div class="quantity__input">
+																			<input data-quantity-value="childrens-hotels" autocomplete="off" type="text" name="childrens-hotels" value="0">
+																		</div>
+																		<button data-quantity-plus type="button" class="quantity__button quantity__button_plus"></button>
+																	</div>
+																</li>
+																<li class="row-tourists__item">
+																	<div>Rooms</div>
+																	<div class="row-tourists__quantity quantity">
+																		<button data-quantity-minus type="button" class="quantity__button quantity__button_minus"></button>
+																		<div class="quantity__input">
+																			<input data-quantity-value="rooms" autocomplete="off" type="text" name="rooms in hotels" value="1">
+																		</div>
+																		<button data-quantity-plus type="button" class="quantity__button quantity__button_plus"></button>
+																	</div>
+																</li>
+																<li class="row-tourists__item ">
+																	<button type="button" class="row-tourists__button button-completed _fw">Done</button>
+																</li>
+															</ul>
+															<div style="display: none;" class="error">
+																The field is mandatory
+															</div>
+														</div>
+
+													</div>
+													<button type="submit" class="form-hotels__button search-btn _icon-search">Search</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- ? form-transfer ======================================================================================================================================================== -->
+
+									<div data-search-tab class="tabs-main__body">
+										<div class="form-transfer">
+											<div class="form-transfer__body">
+												<div class="form-transfer__rows">
+													<div class="form-transfer__row form-transfer__row--top">
+														<div data-spoiler-close data-select class="form-transfer__input _icon-apartment _input-item">
+															<input readonly class="_input-wrapper" data-selected data-search-input type="text" placeholder="Country of departure" name="city transfer" autocomplete="off">
+															<div class="form-transfer__items items-dropdown items-dropdown_cities">
+																<div class="items-dropdown__item">
+																	<div class="items-dropdown__wrapper">
+																		<div class="items-dropdown__search-header">
+																			<input autocomplete="off" type="search" name="search city transfer" placeholder="Enter the sorting value" class="items-dropdown__search-input">
+																		</div>
+																		<ul data-simplebar class="items-dropdown__list">
+																			<li class="items-dropdown__item">
+																				<label class="items-dropdown__label">
+																					<input data-search-input class="inp-hidden" type="radio" name="city transfer value" value="Dubai">
+																					<span data-serch-line class="items-dropdown__content">
+																						<span class="items-dropdown__title">Dubai</span>
+																					</span>
+																				</label>
+																			</li>
+																			<li class="items-dropdown__item">
+																				<label class="items-dropdown__label">
+																					<input data-search-input class="inp-hidden" type="radio" name="city transfer value" value="Istanbul">
+																					<span data-serch-line class="items-dropdown__content">
+																						<span class="items-dropdown__title">Istanbul</span>
+																					</span>
+																				</label>
+																			</li>
+																			<li class="items-dropdown__item">
+																				<label class="items-dropdown__label">
+																					<input data-search-input class="inp-hidden" type="radio" name="city transfer value" value="Tashkent">
+																					<span data-serch-line class="items-dropdown__content">
+																						<span class="items-dropdown__title">Tashkent</span>
+																					</span>
+																				</label>
+																			</li>
+																			<li class="items-dropdown__item">
+																				<label class="items-dropdown__label">
+																					<input data-search-input class="inp-hidden" type="radio" name="city transfer value" value="Kazakhstan">
+																					<span data-serch-line class="items-dropdown__content">
+																						<span class="items-dropdown__title">Kazakhstan</span>
+																					</span>
+																				</label>
+																			</li>
+																			<li class="items-dropdown__item">
+																				<label class="items-dropdown__label">
+																					<input data-search-input class="inp-hidden" type="radio" name="city transfer value" value="Turkmenistan">
+																					<span data-serch-line class="items-dropdown__content">
+																						<span class="items-dropdown__title">Turkmenistan</span>
+																					</span>
+																				</label>
+																			</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+															<div style="display: none;" class="error">
+																The field is required
+															</div>
+														</div>
+														<div data-select data-spoiler-close class="form-transfer__input _icon-location _input-item">
+															<input readonly class="_input-wrapper" data-selected data-search-input name="From" placeholder="City" autocomplete="off" type="text">
+															<div class="form-transfer__items items-dropdown items-dropdown_cities">
+																<div class="items-dropdown__item">
+																	<div class="items-dropdown__wrapper">
+																		<div class="items-dropdown__search-header">
+																			<input autocomplete="off" type="search" name="seacrh city transfer-2" placeholder="Enter the value for sorting" class="items-dropdown__search-input">
+																		</div>
+																		<ul data-simplebar class="items-dropdown__list">
+																			<li class="items-dropdown__item">
+																				<label class="items-dropdown__label">
+																					<input data-search-input class="inp-hidden" type="radio" name="city transfer value-2" value="Dubai">
+																					<span data-serch-line class="items-dropdown__content">
+																						<span class="items-dropdown__title">Dubai</span>
+																					</span>
+																				</label>
+																			</li>
+																			<li class="items-dropdown__item">
+																				<label class="items-dropdown__label">
+																					<input data-search-input class="inp-hidden" type="radio" name="city transfer value-2" value="Istanbul">
+																					<span data-serch-line class="items-dropdown__content">
+																						<span class="items-dropdown__title">Istanbul</span>
+																					</span>
+																				</label>
+																			</li>
+																			<li class="items-dropdown__item">
+																				<label class="items-dropdown__label">
+																					<input data-search-input class="inp-hidden" type="radio" name="city transfer value-2" value="Tashkent">
+																					<span data-serch-line class="items-dropdown__content">
+																						<span class="items-dropdown__title">Tashkent</span>
+																					</span>
+																				</label>
+																			</li>
+																			<li class="items-dropdown__item">
+																				<label class="items-dropdown__label">
+																					<input data-search-input class="inp-hidden" type="radio" name="city transfer value-2" value="Kazakhstan">
+																					<span data-serch-line class="items-dropdown__content">
+																						<span class="items-dropdown__title">Kazakhstan</span>
+																					</span>
+																				</label>
+																			</li>
+																			<li class="items-dropdown__item">
+																				<label class="items-dropdown__label">
+																					<input data-search-input class="inp-hidden" type="radio" name="city transfer value-2" value="Turkmenistan">
+																					<span data-serch-line class="items-dropdown__content">
+																						<span class="items-dropdown__title">Turkmenistan</span>
+																					</span>
+																				</label>
+																			</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+															<div style="display: none;" class="error">
+																The field is required
+															</div>
+														</div>
+														<div data-select data-spoiler-close class="form-transfer__input _icon-connecting _input-item _bg-checked">
+															<input readonly data-selected data-search-input name="aeroports" placeholder="Airport name" class="row-placement__selected _input-wrapper secect-arrow" autocomplete="off" type="text"><span>
+															</span>
+															<div class="form-transfer__items items-dropdown items-dropdown_aeroports">
+																<div class="items-dropdown__item">
+																	<div class="items-dropdown__wrapper">
+																		<ul data-simplebar class="items-dropdown__list items-dropdown__list_aeroports">
+																			<li class="items-dropdown__item">
+																				<label class="items-dropdown__label">
+																					<input data-search-input class="inp-hidden" type="radio" name="aeroport" value="Airport 1">
+																					<span data-serch-line class="items-dropdown__content">
+																						<span class="items-dropdown__title">Airport 1</span>
+																					</span>
+																				</label>
+																			</li>
+																			<li class="items-dropdown__item">
+																				<label class="items-dropdown__label">
+																					<input data-search-input class="inp-hidden" type="radio" name="aeroport" value="Airport 2">
+																					<span data-serch-line class="items-dropdown__content">
+																						<span class="items-dropdown__title">Airport 2</span>
+																					</span>
+																				</label>
+																			</li>
+																			<li class="items-dropdown__item">
+																				<label class="items-dropdown__label">
+																					<input data-search-input class="inp-hidden" type="radio" name="aeroport" value="Airport 3">
+																					<span data-serch-line class="items-dropdown__content">
+																						<span class="items-dropdown__title">Airport 3</span>
+																					</span>
+																				</label>
+																			</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+															<div style="display: none;" class="error">
+																The field is required
+															</div>
+														</div>
+
+													</div>
+													<div class="form-transfer__row form-transfer__row--bottom">
+														<div id="calendarTransfer" class="form-transfer__input _icon-month _input-item">
+															<input readonly class="_input-wrapper" type="text" name="transfer-date" placeholder="Date" autocomplete="off">
+															<div style="display: none;" class="error">
+																The field is required
+															</div>
+
+														</div>
+														<div data-quantity-wrapper data-select class="form-transfer__input close-block _input-item">
+															<button data-selected type="button" class="row-tourists__selected _input-wrapper">
+																<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+																	<mask id="mask0_0_986" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
+																		<rect width="20" height="20" fill="#D9D9D9" />
+																	</mask>
+																	<g mask="url(#mask0_0_986)">
+																		<path
+																			d="M0.833496 16.6666V14.3333C0.833496 13.861 0.955024 13.427 1.19808 13.0312C1.44114 12.6353 1.76405 12.3333 2.16683 12.1249C3.02794 11.6944 3.90294 11.3714 4.79183 11.1562C5.68072 10.9409 6.5835 10.8333 7.50016 10.8333C8.41683 10.8333 9.31961 10.9409 10.2085 11.1562C11.0974 11.3714 11.9724 11.6944 12.8335 12.1249C13.2363 12.3333 13.5592 12.6353 13.8022 13.0312C14.0453 13.427 14.1668 13.861 14.1668 14.3333V16.6666H0.833496ZM15.8335 16.6666V14.1666C15.8335 13.5555 15.6634 12.9687 15.3231 12.4062C14.9828 11.8437 14.5002 11.361 13.8752 10.9583C14.5835 11.0416 15.2502 11.1839 15.8752 11.3853C16.5002 11.5867 17.0835 11.8333 17.6252 12.1249C18.1252 12.4027 18.5071 12.7117 18.771 13.052C19.0349 13.3923 19.1668 13.7638 19.1668 14.1666V16.6666H15.8335ZM7.50016 9.99992C6.5835 9.99992 5.79877 9.67353 5.146 9.02075C4.49322 8.36797 4.16683 7.58325 4.16683 6.66659C4.16683 5.74992 4.49322 4.9652 5.146 4.31242C5.79877 3.65964 6.5835 3.33325 7.50016 3.33325C8.41683 3.33325 9.20155 3.65964 9.85433 4.31242C10.5071 4.9652 10.8335 5.74992 10.8335 6.66659C10.8335 7.58325 10.5071 8.36797 9.85433 9.02075C9.20155 9.67353 8.41683 9.99992 7.50016 9.99992ZM15.8335 6.66659C15.8335 7.58325 15.5071 8.36797 14.8543 9.02075C14.2016 9.67353 13.4168 9.99992 12.5002 9.99992C12.3474 9.99992 12.1529 9.98256 11.9168 9.94783C11.6807 9.91311 11.4863 9.87492 11.3335 9.83325C11.7085 9.38881 11.9967 8.89575 12.1981 8.35409C12.3995 7.81242 12.5002 7.24992 12.5002 6.66659C12.5002 6.08325 12.3995 5.52075 12.1981 4.97909C11.9967 4.43742 11.7085 3.94436 11.3335 3.49992C11.5279 3.43047 11.7224 3.38534 11.9168 3.3645C12.1113 3.34367 12.3057 3.33325 12.5002 3.33325C13.4168 3.33325 14.2016 3.65964 14.8543 4.31242C15.5071 4.9652 15.8335 5.74992 15.8335 6.66659ZM2.50016 14.9999H12.5002V14.3333C12.5002 14.1805 12.462 14.0416 12.3856 13.9166C12.3092 13.7916 12.2085 13.6944 12.0835 13.6249C11.3335 13.2499 10.5766 12.9687 9.81266 12.7812C9.04877 12.5937 8.27794 12.4999 7.50016 12.4999C6.72239 12.4999 5.95155 12.5937 5.18766 12.7812C4.42377 12.9687 3.66683 13.2499 2.91683 13.6249C2.79183 13.6944 2.69114 13.7916 2.61475 13.9166C2.53836 14.0416 2.50016 14.1805 2.50016 14.3333V14.9999ZM7.50016 8.33325C7.9585 8.33325 8.35086 8.17006 8.67725 7.84367C9.00364 7.51728 9.16683 7.12492 9.16683 6.66659C9.16683 6.20825 9.00364 5.81589 8.67725 5.4895C8.35086 5.16311 7.9585 4.99992 7.50016 4.99992C7.04183 4.99992 6.64947 5.16311 6.32308 5.4895C5.99669 5.81589 5.8335 6.20825 5.8335 6.66659C5.8335 7.12492 5.99669 7.51728 6.32308 7.84367C6.64947 8.17006 7.04183 8.33325 7.50016 8.33325Z"
+																			fill="#7D7D7D" />
+																	</g>
+																</svg>
+																Number of persons:<span data-quantity-render="Number of persons transfer"></span>
+															</button>
+															<ul class="items-dropdown items-dropdown_tourists items-dropdown_tourists-transfer">
+																<li class="row-tourists__item">
+																	<div>Quantity</div>
+																	<div class="row-tourists__quantity quantity">
+																		<button data-quantity-minus type="button" class="quantity__button quantity__button_minus"></button>
+																		<div class="quantity__input">
+																			<input data-quantity-value="Number of persons transfer" autocomplete="off" type="text" name="Number of persons transfer" value="1">
+																		</div>
+																		<button data-quantity-plus type="button" class="quantity__button quantity__button_plus"></button>
+																	</div>
+																</li>
+																<li class="row-tourists__item ">
+																	<button type="button" class="row-tourists__button button-completed _fw">Done</button>
+																</li>
+															</ul>
+															<div style="display: none;" class="error">
+																The field is required
+															</div>
+														</div>
+														<div data-quantity-wrapper data-select data-spoiler-close class="form-transfer__input _icon-shuttle _input-item _bg-checked">
+															<input readonly class="_input-wrapper" data-selected data-search-input type="text" placeholder="Transfers" name="Type_transfer" autocomplete="off">
+															<div class="form-transfer items-dropdown items-dropdown_type-of-transfer">
+																<div class="items-dropdown__item">
+																	<div class="items-dropdown__wrapper">
+																		<ul data-simplebar class="items-dropdown__list items-dropdown__list_type-transfer">
+																			<li class="items-dropdown__item">
+																				<label class="items-dropdown__label">
+																					<input data-search-input class="inp-hidden" type="radio" name="type of transfer" value="1 type">
+																					<span data-serch-line class="items-dropdown__content">
+																						<span class="items-dropdown__title">1 type</span>
+																					</span>
+																				</label>
+
+																			</li>
+																			<li class="items-dropdown__item">
+																				<label class="items-dropdown__label">
+																					<input data-search-input class="inp-hidden" type="radio" name="type of transfer" value="2 type">
+																					<span data-serch-line class="items-dropdown__content">
+																						<span class="items-dropdown__title">2 type</span>
+																					</span>
+																				</label>
+																			</li>
+																			<li class="items-dropdown__item">
+																				<label class="items-dropdown__label">
+																					<input data-search-input class="inp-hidden" type="radio" name="type of transfer" value="3 type">
+																					<span data-serch-line class="items-dropdown__content">
+																						<span class="items-dropdown__title">3 type</span>
+																					</span>
+																				</label>
+																			</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+															<div style="display: none;" class="error">
+																The field is required
+															</div>
+														</div>
+													</div>
+												</div>
+												<button class="form-transfer__btn search-btn _icon-search">Search</button>
+											</div>
+										</div>
+									</div>
+									<!-- ? form-visa ======================================================================================================================================================== -->
+									<div data-search-tab class="tabs-main__body">
+										<div class="form-visa">
+											<div class="form-visa__body">
+												<div class="form-visa__search-line">
+
+													<div data-select data-spoiler-close class="form-visa__input form-visa__input_city _icon-location _input-item">
+														<input readonly data-selected data-search-input type="text" placeholder="Citizen of the country" name="Citizen_of_the_country _input-wrapper" autocomplete="off">
+														<div class="form-transfer__items items-dropdown items-dropdown_visa-cities">
+															<div class="items-dropdown__item">
+																<div class="items-dropdown__wrapper items-dropdown__wrapper">
+																	<div class="items-dropdown__search-header">
+																		<input autocomplete="off" type="search" name="search city visa" placeholder="Enter the value for sorting" class="items-dropdown__search-input">
+																	</div>
+																	<ul data-simplebar class="items-dropdown__list">
+																		<li class="items-dropdown__item">
+																			<label class="items-dropdown__label">
+																				<input data-search-input class="inp-hidden" type="radio" name="city visa value" value="Dubai">
+																				<span data-serch-line class="items-dropdown__content">
+																					<span class="items-dropdown__title">Dubai</span>
+																				</span>
+																			</label>
+																		</li>
+																		<li class="items-dropdown__item">
+																			<label class="items-dropdown__label">
+																				<input data-search-input class="inp-hidden" type="radio" name="city visa value" value="Istanbul">
+																				<span data-serch-line class="items-dropdown__content">
+																					<span class="items-dropdown__title">Istanbul</span>
+																				</span>
+																			</label>
+																		</li>
+																		<li class="items-dropdown__item">
+																			<label class="items-dropdown__label">
+																				<input data-search-input class="inp-hidden" type="radio" name="city visa value" value="Tashkent">
+																				<span data-serch-line class="items-dropdown__content">
+																					<span class="items-dropdown__title">Tashkent</span>
+																				</span>
+																			</label>
+																		</li>
+																		<li class="items-dropdown__item">
+																			<label class="items-dropdown__label">
+																				<input data-search-input class="inp-hidden" type="radio" name="city visa value" value="Kazakhstan">
+																				<span data-serch-line class="items-dropdown__content">
+																					<span class="items-dropdown__title">Kazakhstan</span>
+																				</span>
+																			</label>
+																		</li>
+																		<li class="items-dropdown__item">
+																			<label class="items-dropdown__label">
+																				<input data-search-input class="inp-hidden" type="radio" name="city visa value" value="Turkmenistan">
+																				<span data-serch-line class="items-dropdown__content">
+																					<span class="items-dropdown__title">Turkmenistan</span>
+																				</span>
+																			</label>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+
+														</div>
+														<div style="display: none;" class="error">
+															The field is required
+														</div>
+													</div>
+
+													<div class="form-visa__column">
+														<div data-spoiler-close data-select class="form-visa__input form-visa__input_type _icon-topic _input-item _bg-checked">
+															<input readonly data-selected data-search-input class="form-visa__date _input-wrapper" type="text" name="Visa_type" placeholder="Visa type" autocomplete="off">
+															<div class="form-transfer__items items-dropdown items-dropdown_type-of-visa">
+																<div class="items-dropdown__item">
+																	<div class="items-dropdown__wrapper items-dropdown__wrapper">
+																		<ul data-simplebar class="items-dropdown__list items-dropdown__list_visa-list">
+																			<li class="items-dropdown__item">
+																				<label class="items-dropdown__label">
+																					<input data-search-input class="inp-hidden" type="radio" name="type of visa" value="1 type">
+																					<span data-serch-line class="items-dropdown__content">
+																						<span class="items-dropdown__title">1 type</span>
+																					</span>
+																				</label>
+																			</li>
+																			<li class="items-dropdown__item">
+																				<label class="items-dropdown__label">
+																					<input data-search-input class="inp-hidden" type="radio" name="type of visa" value="2 type">
+																					<span data-serch-line class="items-dropdown__content">
+																						<span class="items-dropdown__title">2 type</span>
+																					</span>
+																				</label>
+																			</li>
+																			<li class="items-dropdown__item">
+																				<label class="items-dropdown__label">
+																					<input data-search-input class="inp-hidden" type="radio" name="type of visa" value="3 type">
+																					<span data-serch-line class="items-dropdown__content">
+																						<span class="items-dropdown__title">3 type</span>
+																					</span>
+																				</label>
+																			</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+															<div style="display: none;" class="error">
+																The field is required
+															</div>
+														</div>
+														<div id="calendarVisa" class="form-visa__input form-visa__input_date _icon-month _input-item">
+															<input readonly class="form-visa__date _input-wrapper" name="visa-date" type="text" placeholder="Date" autocomplete="off">
+															<div style="display: none;" class="error">
+																The field is required
+															</div>
+														</div>
+													</div>
+													<div data-quantity-wrapper data-select class="form-visa__input form-visa__input_persons close-block _input-item">
+														<button data-selected type="button" class="row-tourists__selected _input-wrapper">
+															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<mask id="mask0_0_1956" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+																	<rect width="24" height="24" fill="#D9D9D9" />
+																</mask>
+																<g mask="url(#mask0_0_1956)">
+																	<path
+																		d="M10 22V15H8V9C8 8.45 8.19583 7.97917 8.5875 7.5875C8.97917 7.19583 9.45 7 10 7H14C14.55 7 15.0208 7.19583 15.4125 7.5875C15.8042 7.97917 16 8.45 16 9V15H14V22H10ZM12 6C11.45 6 10.9792 5.80417 10.5875 5.4125C10.1958 5.02083 10 4.55 10 4C10 3.45 10.1958 2.97917 10.5875 2.5875C10.9792 2.19583 11.45 2 12 2C12.55 2 13.0208 2.19583 13.4125 2.5875C13.8042 2.97917 14 3.45 14 4C14 4.55 13.8042 5.02083 13.4125 5.4125C13.0208 5.80417 12.55 6 12 6Z"
+																		fill="#7D7D7D" />
+																</g>
+															</svg>
+
+															Number of persons:<span data-quantity-render="Number of persons visa"></span>
+														</button>
+														<ul class="items-dropdown items-dropdown_tourists-visa">
+															<li class="row-tourists__item">
+																<div>Quantity</div>
+																<div class="row-tourists__quantity quantity">
+																	<button data-quantity-minus type="button" class="quantity__button quantity__button_minus"></button>
+																	<div class="quantity__input">
+																		<input data-quantity-value="Number of persons visa" autocomplete="off" type="text" name="Number of persons visa" value="1">
+																	</div>
+																	<button data-quantity-plus type="button" class="quantity__button quantity__button_plus"></button>
+																</div>
+															</li>
+															<li class="row-tourists__item ">
+																<button type="button" class="row-tourists__button button-completed _fw">Done</button>
+															</li>
+														</ul>
+														<div style="display: none;" class="error">
+															The field is required
+														</div>
+													</div>
+													<button type="submit" class="form-visa__button search-btn _icon-search">Search</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- ? ======================================================================================================================================================== -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/app.min.js?_v=20231024110922"></script>
+</body>
+
+</html>
